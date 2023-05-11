@@ -8,6 +8,8 @@
 2. [Getting Started](#getting-started)
    1. [Pre-requisites](#pre-requisites)
    2. [Running](#running)
+   3. [Architecture](#architecture)
+   4. [Software Model Diagram](#software-model-diagram)
 
 <a name="introduction"></a>
 ## Introduction
@@ -30,7 +32,6 @@ This project includes following tools/frameworks
 <a name="guide"></a>
 ### Guides
 The following guides illustrate how to use some features concretely:
-
 * [Messaging with RabbitMQ](https://spring.io/guides/gs/messaging-rabbitmq/)
 * [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
 * [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
@@ -49,3 +50,15 @@ The following guides illustrate how to use some features concretely:
 ``docker-compose up -d``
 * When initialization is complete of docker containers. Api will be ready to take calls on `localhost:8080`
 * For ease of use swagger is implemented to project which is accessible at `http://localhost:8080/swagger-ui/index.html`
+* Other available endpoints are listed below
+  * `GET /healthcheck` Returns contain the server status.
+  * `GET /order/available` Returns available drink options for `drink_type` field
+  * `POST /order` Sending body with following format will enqueue the drink to brew process
+  `{"drink_type" : "coffee", "sugar_amount" : 1, "with_milk" : true}`
+<a name="architecture"></a>
+#### Architecture
+This project (trying to) follow Clean Code Architecture as it can be seen in image
+![CleanArchitecture.jpg](docs%2FCleanArchitecture.jpg)
+<a name="model"></a>
+#### Software Model Diagram
+![C4Model.png](docs%2FC4Model.png)
