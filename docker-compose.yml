@@ -1,0 +1,31 @@
+version: "2.4"
+services:
+  app:
+    build:
+      context: .
+      target: builder
+    command: sh scripts/boot.sh
+    working_dir: /build
+    environment:
+      - APP_ENV=dev
+      - ENV_NAME=development
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_USERNAME=guest
+      - RABBITMQ_PASSWORD=guest
+      - RABBITMQ_VHOST=/
+    links:
+      - rabbitmq
+    volumes:
+      - './:/build'
+    ports:
+      - "8080:8080"
+
+  rabbitmq:
+    image: heidiks/rabbitmq-delayed-message-exchange:3.8.9-management
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
