@@ -2,7 +2,7 @@ package com.shaydaroglu.coffeeapi.application.usecases
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import com.shaydaroglu.coffeeapi.domain.model.Order
+import com.shaydaroglu.coffeeapi.domain.order.model.Order
 import com.shaydaroglu.coffeeapi.infrastructure.messaging.rabbitmq.sender.NotificationSender
 import org.springframework.stereotype.Component
 import java.util.*

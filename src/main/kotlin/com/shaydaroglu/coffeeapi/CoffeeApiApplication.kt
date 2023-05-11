@@ -1,9 +1,9 @@
-package com.shaydaroglu.coffeeapi.application
+package com.shaydaroglu.coffeeapi
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
-@SpringBootApplication(scanBasePackages = ["com.shaydaroglu.coffeeapi"])
+@SpringBootApplication
 class CoffeeApiApplication
 
 fun main(args: Array<String>) {
