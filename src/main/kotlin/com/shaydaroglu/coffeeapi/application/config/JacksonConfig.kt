@@ -1,4 +1,4 @@
-package com.shaydaroglu.coffeeapi.config
+package com.shaydaroglu.coffeeapi.application.config
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.PropertyNamingStrategies

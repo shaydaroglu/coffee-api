@@ -21,7 +21,7 @@ services:
       - "8080:8080"
 
   rabbitmq:
-    image: heidiks/rabbitmq-delayed-message-exchange:3.8.9-management
+    image: rabbitmq:3.8.9-management
     environment:
       - RABBITMQ_DEFAULT_USER=guest
       - RABBITMQ_DEFAULT_PASS=guest
