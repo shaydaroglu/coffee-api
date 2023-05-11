@@ -15,4 +15,3 @@ ENV PATH=${PATH}:/opt/gradle-${GRADLE_VERSION}/bin
 FROM base
 
 COPY build/libs/coffee-api.jar .
-CMD ["coffe-api.jar"]

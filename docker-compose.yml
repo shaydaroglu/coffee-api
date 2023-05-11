@@ -7,8 +7,6 @@ services:
     command: sh scripts/boot.sh
     working_dir: /build
     environment:
-      - APP_ENV=dev
-      - ENV_NAME=development
       - RABBITMQ_HOST=rabbitmq
       - RABBITMQ_USERNAME=guest
       - RABBITMQ_PASSWORD=guest
