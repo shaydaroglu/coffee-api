@@ -21,16 +21,15 @@ class MagicCoffeeMakerUseCase(
         }
     }
 
-    companion object {
-        fun messageBuilder(orderToSerialize: Order): String {
-            return "Order is ready: ${orderToSerialize.drinkType.string}, " +
-                    "Sugar Amount: ${orderToSerialize.sugarAmount}, " +
-                    "Milk: ${
-                        when (orderToSerialize.withMilk) {
-                            true -> "Yes"
-                            else -> "No"
-                        }
-                    }"
-        }
+    private fun messageBuilder(orderToSerialize: Order): String {
+        return "Order is ready: ${orderToSerialize.drinkType.string}, " +
+                "Sugar Amount: ${orderToSerialize.sugarAmount}, " +
+                "Milk: ${
+                    when (orderToSerialize.withMilk) {
+                        true -> "Yes"
+                        else -> "No"
+                    }
+                }"
     }
+
 }

@@ -58,7 +58,10 @@ The following guides illustrate how to use some features concretely:
      <a name="architecture"></a>
 #### Architecture
 This project (trying to) follow Clean Code Architecture as it can be seen in image
+
 ![CleanArchitecture.jpg](docs%2FCleanArchitecture.jpg)
+
 <a name="model"></a>
 #### Software Model Diagram
+
 ![C4Model.png](docs%2FC4Model.png)
